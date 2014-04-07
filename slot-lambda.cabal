@@ -1,13 +1,20 @@
 name:                slot-lambda
-version:             0.1.0.0
-synopsis:            Write lambdas without naming the parameters. --\_ + _  =  \x y -> x+y
-description:         Write lambdas without naming the parameters. 
-                     e.g. [s| ı : ı : _ı : ı : _ı : _ı : _0 : [] |] 'a' 'b' 'c' 
-							=    \x y z -> x:y:y:z:z:z:x:[]
-							=    "abbccca"
-							Just `import Syntax.Slot` and use either [s| ... |] or [slot| ... |], which are the same thing given two names just for convenience.
+version:             0.1.0.2
+synopsis:            Write lambdas without naming the parameters.
+description:         Write lambdas without naming the parameters. Example:   
+                     .
+                     @   
+                        [s| ı : ı : _ı : ı : _ı : _ı : _0 : [] |] \'a\' \'b\' \'c\'
+                     =  (\\x y z -> x:y:y:z:z:z:x:[]) \'a\' \'b\' \'c\'
+                     =  \"abbccca\"
+                     @
+                     .
+                     The unicode character @ı@(305) representing a \'slot\' can be input in vim with the digraph \'i.\' 
+                     .
+                     Just @import Syntax.Slot@ and use either @[s| ... |]@ or @[slot| ... |]@, which are the same thing given two names just for convenience.
 license:             MIT
 license-file:        LICENSE
+homepage:            https://github.com/ducis/pa_slot
 author:              ducis
 maintainer:          ducis_cn@126.com
 -- copyright:           
@@ -19,6 +26,6 @@ cabal-version:       >=1.10
 library
   exposed-modules:     Syntax.Slot
   other-extensions:    TemplateHaskell, QuasiQuotes
-  build-depends:       base >=4.6, template-haskell >=2.8, haskell-src-meta>=0.6.0.5, syb>=0.4.1, vector>=0.10.9.1, haskell-src-exts >= 1.14.0.1, containers >= 0.5.0.0
+  build-depends:       base >=4.6 && < 5, template-haskell >=2.8, haskell-src-meta>=0.6.0.5, syb>=0.4.1, vector>=0.10.9.1, haskell-src-exts >= 1.14.0.1, containers >= 0.5.0.0
   default-language:    Haskell2010
 
