@@ -13,7 +13,7 @@ maintainer:          ducis_cn@126.com
 -- copyright:           
 category:            Language
 build-type:          Simple
-extra-source-files:  README.md
+extra-source-files:  README.md, examples/*.hs, Makefile
 cabal-version:       >=1.10
 
 library
