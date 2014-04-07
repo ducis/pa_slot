@@ -1,4 +1,7 @@
 pa\_slot
 ==========
 
-	\\ _ + _ * _1  * _1  =  fun a b c  -> a + b * c * c
+Write lambdas without naming the parameters.
+
+	[s| ı : ı : _ı : ı : _ı : _ı : _0 : [] |] 'a' 'b' 'c' = "abbccca"
+

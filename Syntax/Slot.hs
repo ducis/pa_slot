@@ -41,7 +41,7 @@ s = QuasiQuoter onExp e e e where
 		names <- (`mapM` ms) $ (show <$>). newName.printf "slot_%02d"
 		let namesV = V.fromList names
 		let namesI = M.fromList $ sort $ concat $ zipWith (\n g->[(l,n)|(_,l)<-g]) names gs
-		return $ LamE (map VarP names) $ M.toExp $ sExp $ (`everywhere` exp) $ mkT $ \case
+		return $ LamE (map (VarP . mkName) names) $ M.toExp $ sExp $ (`everywhere` exp) $ mkT $ \case
 			Var l0 (UnQual l1 (A.Ident (l::SrcSpanInfo) x)) -> Var l0 $ UnQual l1 $ A.Ident l $ case x of
 				"ı" -> fromI
 				"_ı" -> fromI

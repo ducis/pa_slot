@@ -1,6 +1,6 @@
 name:                slot-lambda
 version:             0.1.0.0
-synopsis:            \_ + _  =  \x y -> x+y
+synopsis:            Write lambdas without naming the parameters. --\_ + _  =  \x y -> x+y
 -- description:         
 license:             MIT
 license-file:        LICENSE
