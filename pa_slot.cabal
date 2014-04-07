@@ -1,7 +1,11 @@
 name:                slot-lambda
 version:             0.1.0.0
 synopsis:            Write lambdas without naming the parameters. --\_ + _  =  \x y -> x+y
--- description:         
+description:         Write lambdas without naming the parameters. 
+                     e.g. [s| ı : ı : _ı : ı : _ı : _ı : _0 : [] |] 'a' 'b' 'c' 
+							=    \x y z -> x:y:y:z:z:z:x:[]
+							=    "abbccca"
+							Just `import Syntax.Slot` and use either [s| ... |] or [slot| ... |], which are the same thing given two names just for convenience.
 license:             MIT
 license-file:        LICENSE
 author:              ducis

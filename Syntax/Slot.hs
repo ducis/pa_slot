@@ -1,5 +1,5 @@
 {-# LANGUAGE LambdaCase, ViewPatterns,ScopedTypeVariables, NoMonomorphismRestriction #-}
-module Syntax.Slot where
+module Syntax.Slot(slot,s) where
 
 import Language.Haskell.TH
 import Language.Haskell.TH.Quote
