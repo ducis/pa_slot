@@ -15,6 +15,6 @@ cabal-version:       >=1.10
 library
   exposed-modules:     Syntax.Slot
   other-extensions:    TemplateHaskell, QuasiQuotes
-  build-depends:       base >=4.6, template-haskell >=2.8, ghc-parser >= 0.1.1.0
+  build-depends:       base >=4.6, template-haskell >=2.8, haskell-src-meta>=0.6.0.5, syb>=0.4.1, vector>=0.10.9.1, haskell-src-exts >= 1.14.0.1, containers >= 0.5.0.0
   default-language:    Haskell2010
 
